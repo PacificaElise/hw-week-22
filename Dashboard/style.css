@@ -7,8 +7,9 @@
 
 main {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 ul {
@@ -30,7 +31,7 @@ ul {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 1%;
   flex-wrap: wrap;
 }
@@ -79,4 +80,34 @@ aside ul li a {
 
 aside ul li a:hover {
   color: #fff;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.data,
+.names {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+button {
+  margin: 10px 0;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  border: 1px solid;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 200px;
 }
