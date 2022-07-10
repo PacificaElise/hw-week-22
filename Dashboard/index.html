@@ -4,12 +4,37 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Dashboard</title>
+    <link rel="shortcut icon" href="./imgs/icons8-диаграмма-64.png" />
+    <link rel="stylesheet" href="./normalized.css" />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="diagramma">
-      <canvas id="myChart" width="400" height="400"></canvas>
+    <div class="wrapper">
+      <aside>
+        <ul>
+          <li class="choose"><a href="#"> home </a></li>
+          <li><a href="#about"> about </a></li>
+          <li><a href="#work"> work </a></li>
+          <li><a href="#services"> services </a></li>
+          <li><a href="#blog"> blog </a></li>
+          <li><a href="#contact"> contact </a></li>
+        </ul>
+      </aside>
+      <main>
+        <section class="charts">
+          <div class="barChart">
+            <canvas id="barChart" width="400" height="400"></canvas>
+          </div>
+          <div class="roundChart">
+            <canvas id="roundChart" width="400" height="400"></canvas>
+          </div>
+          <div class="radarChart">
+            <canvas id="radarChart" width="400" height="400"></canvas>
+          </div>
+        </section>
+        <section></section>
+      </main>
     </div>
     <script src="./dist/main.js"></script>
   </body>

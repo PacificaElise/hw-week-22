@@ -1,4 +1,82 @@
-.diagramma {
+.wrapper {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  font-family: Roboto, sans-serif;
+  background-color: #adadad;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style: none;
+}
+
+.barChart,
+.roundChart,
+.radarChart {
   width: 300px;
   height: auto;
+  background-color: #fff;
+  border: #2f2f2f;
+  border-radius: 12px;
+  margin-bottom: 1%;
+}
+
+.charts {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1%;
+  flex-wrap: wrap;
+}
+
+aside {
+  height: 100%;
+  background-color: #2f2f2f;
+  text-align: center;
+}
+
+aside ul {
+  padding: 0;
+}
+
+aside i {
+  color: #adadad;
+  cursor: pointer;
+}
+
+aside ul li {
+  margin-bottom: 20px;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+aside ul li.choose {
+  text-decoration: line-through;
+  color: #fff;
+}
+
+aside ul li.choose a {
+  color: #fff;
+}
+aside ul li.choose:after {
+  content: " ";
+}
+aside ul li.choose:before {
+  content: "  ";
+}
+
+aside ul li a {
+  text-decoration: none;
+  color: #adadad;
+  font-size: 14px;
+}
+
+aside ul li a:hover {
+  color: #fff;
 }
