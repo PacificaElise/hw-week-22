@@ -109,13 +109,13 @@ const radarChart = new Chart(ctx3, {
 
 
 let datas;
-if (localStorage.getItem('data')) {
-    datas = JSON.parse(localStorage.getItem('data'));
+if (localStorage.getItem('datas')) {
+    datas = JSON.parse(localStorage.getItem('datas'));
 } else {
     datas = [6, 10, 12, 13, 17, 21];
 }
 
-localStorage.setItem('data', JSON.stringify(datas));
+localStorage.setItem('datas', JSON.stringify(datas));
 
 
 let data1 = document.getElementById('data1'),
@@ -125,10 +125,10 @@ let data1 = document.getElementById('data1'),
     data5 = document.getElementById('data5'),
     data6 = document.getElementById('data6')
 
-document.querySelector('.addData').addEventListener('click', function(event) {
+document.querySelector('.addDatas').addEventListener('click', function(event) {
     datas = [];
     datas.push(data1.value,data2.value,data3.value,data4.value,data5.value,data6.value);
-    localStorage.setItem('data', JSON.stringify(datas));
+    localStorage.setItem('datas', JSON.stringify(datas));
     data1.value = '';
     data2.value = '';
     data3.value = '';
@@ -185,11 +185,96 @@ barChart.update();
 roundChart.update();
 radarChart.update();
 
+let titleFirst;
+if (localStorage.getItem('titleFirst')) {
+    titleFirst = JSON.parse(localStorage.getItem('titleFirst'));
+} else {
+    titleFirst = 'My First Dataset';
+}
+
+localStorage.setItem('titleFirst', JSON.stringify(titleFirst));
+
+
+let title1 = document.getElementById('titleFirst');
+    
+
+document.querySelector('.addTitles').addEventListener('click', function(event) {
+    titleFirst = "";
+    titleFirst = title1.value;
+    localStorage.setItem('titleFirst', JSON.stringify(titleFirst));
+    title1.value = '';
+    location.reload();
+  });
+
+  radarChart.data.datasets[0].label = titleFirst;
+
+  radarChart.update();
+
+  let titleSecond;
+  if (localStorage.getItem('titleSecond')) {
+    titleSecond = JSON.parse(localStorage.getItem('titleSecond'));
+  } else {
+    titleSecond = 'My Second Dataset';
+  }
+  
+  localStorage.setItem('titleSecond', JSON.stringify(titleSecond));
+  
+  
+  let title2 = document.getElementById('titleSecond');
+      
+  
+  document.querySelector('.addTitles').addEventListener('click', function(event) {
+      titleSecond = "";
+      titleSecond = title2.value;
+      localStorage.setItem('titleSecond', JSON.stringify(titleSecond));
+      title2.value = '';
+      location.reload();
+    });
+  
+    radarChart.data.datasets[1].label = titleSecond;
+  
+    radarChart.update();
+
+
 document.querySelector('.clear').addEventListener('click', function() {
   localStorage.clear();
   location.reload();
   }
 );
+
+let rDatas;
+if (localStorage.getItem('rDatas')) {
+    rDatas = JSON.parse(localStorage.getItem('rDatas'));
+} else {
+    rDatas = [28, 48, 40, 19, 96, 27];
+}
+
+localStorage.setItem('rDatas', JSON.stringify(rDatas));
+
+
+let rData1 = document.getElementById('rData1'),
+    rData2 = document.getElementById('rData2'),
+    rData3 = document.getElementById('rData3'),
+    rData4 = document.getElementById('rData4'),
+    rData5 = document.getElementById('rData5'),
+    rData6 = document.getElementById('rData6')
+
+document.querySelector('.addRDatas').addEventListener('click', function(event) {
+    rDatas = [];
+    rDatas.push(rData1.value,rData2.value,rData3.value,rData4.value,rData5.value,rData6.value);
+    localStorage.setItem('rDatas', JSON.stringify(rDatas));
+    rData1.value = '';
+    rData2.value = '';
+    rData3.value = '';
+    rData4.value = '';
+    rData5.value = '';
+    rData6.value = '';
+    location.reload();
+  });
+
+radarChart.data.datasets[1].data = rDatas;
+
+radarChart.update();
 
 
 const data = [

@@ -13,9 +13,9 @@
     <div class="wrapper">
       <aside>
         <ul>
-          <li class="choose"><a href="#"> home </a></li>
+          <li><a href="#"> home </a></li>
           <li><a href="#about"> about </a></li>
-          <li><a href="#work"> dashboard </a></li>
+          <li class="choose"><a href="#dashboard"> dashboard </a></li>
           <li><a href="#services"> pages </a></li>
           <li><a href="#blog"> blog </a></li>
           <li><a href="#contact"> contact </a></li>
@@ -34,53 +34,91 @@
           </div>
         </section>
         <div class="container">
-        <section class="data">
-          <h2>Введите данные</h2>
-          <label for="data1">
-            <input id="data1" type="number" />
-          </label>
-          <label for="data2">
-            <input id="data2" type="number" />
-          </label>
-          <label for="data3">
-            <input id="data3" type="number" />
-          </label>
-          <label for="data4">
-            <input id="data4" type="number" />
-          </label>
-          <label for="data5">
-            <input id="data5" type="number" />
-          </label>
-          <label for="data6">
-            <input id="data6" type="number" />
-          </label>
-          <button class="addData">Добавить данные</button>
-        </section>
-      </section>
-      <section class="names">
-        <h2>Введите названия</h2>
-        <label for="name1">
-          <input id="name1" type="text" />
-        </label>
-        <label for="names">
-          <input id="name2" type="text" />
-        </label>
-        <label for="name3">
-          <input id="name3" type="text" />
-        </label>
-        <label for="name4">
-          <input id="name4" type="text" />
-        </label>
-        <label for="name5">
-          <input id="name5" type="text" />
-        </label>
-        <label for="name6">
-          <input id="name6" ype="text" />
-        </label>
-        <button class="addNames">Добавить названия</button>
-      </section>
-    </div>
-    <button class="clear">Очистить данные</button>
+          <section class="datas">
+            <h2>Введите данные</h2>
+            <label for="data1">
+              <input id="data1" type="number" />
+            </label>
+            <label for="data2">
+              <input id="data2" type="number" />
+            </label>
+            <label for="data3">
+              <input id="data3" type="number" />
+            </label>
+            <label for="data4">
+              <input id="data4" type="number" />
+            </label>
+            <label for="data5">
+              <input id="data5" type="number" />
+            </label>
+            <label for="data6">
+              <input id="data6" type="number" />
+            </label>
+            <button class="addDatas">Добавить данные</button>
+          </section>
+          <section class="names">
+            <h2>Введите названия</h2>
+            <label for="name1">
+              <input id="name1" type="text" />
+            </label>
+            <label for="name2">
+              <input id="name2" type="text" />
+            </label>
+            <label for="name3">
+              <input id="name3" type="text" />
+            </label>
+            <label for="name4">
+              <input id="name4" type="text" />
+            </label>
+            <label for="name5">
+              <input id="name5" type="text" />
+            </label>
+            <label for="name6">
+              <input id="name6" ype="text" />
+            </label>
+            <button class="addNames">Добавить названия</button>
+          </section>
+          <section class="rDatas">
+            <h2>
+              Введите данные <br />
+              (для 2-й области <br />
+              радиальной диаграммы)
+            </h2>
+            <label for="rData1">
+              <input id="rData1" type="number" />
+            </label>
+            <label for="rData2">
+              <input id="rData2" type="number" />
+            </label>
+            <label for="rData3">
+              <input id="rData3" type="number" />
+            </label>
+            <label for="rData4">
+              <input id="rData4" type="number" />
+            </label>
+            <label for="rData5">
+              <input id="rData5" type="number" />
+            </label>
+            <label for="rData6">
+              <input id="rData6" type="number" />
+            </label>
+            <button class="addRDatas">Добавить данные</button>
+          </section>
+          <section class="titles">
+            <h2>
+              Введите названия <br />
+              (для радиальной диаграммы)
+            </h2>
+            <label for="titleFirst">
+              <input id="titleFirst" type="text" />
+            </label>
+            <label for="titleSecond">
+              <input id="titleSecond" type="text" />
+            </label>
+            <button class="addTitles">Добавить названия</button>
+          </section>
+        </div>
+        <button class="clear">Очистить данные</button>
       </main>
     </div>
     <script src="./dist/main.js"></script>

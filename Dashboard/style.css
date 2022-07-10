@@ -12,6 +12,13 @@ main {
   align-items: center;
 }
 
+h2 {
+  height: 35px;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+}
+
 ul {
   list-style: none;
 }
@@ -24,10 +31,12 @@ ul {
   background-color: #fff;
   border: #2f2f2f;
   border-radius: 12px;
-  margin-bottom: 1%;
+  margin-bottom: 1.5%;
+  justify-content: center;
 }
 
 .charts {
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -83,22 +92,31 @@ aside ul li a:hover {
 }
 
 .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 3%;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-.data,
-.names {
+.datas,
+.names,
+.titles,
+.rDatas {
   display: flex;
   flex-wrap: wrap;
   gap: 1%;
   flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+.addTitles {
+  margin-left: 10px;
 }
 
 button {
@@ -109,5 +127,10 @@ button {
   border: 1px solid;
   border-radius: 5px;
   cursor: pointer;
-  width: 200px;
+  width: 180px;
+}
+
+input {
+  border: 1px solid;
+  border-radius: 5px;
 }
